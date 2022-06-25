@@ -1,0 +1,45 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+.header {
+  @include customFlex(center, center);
+  background-size: cover;
+  background-image: url("/public/images/FirstPhoto.png");
+  color: white;
+  flex-direction: column;
+  filter: sepia(60%);
+  height: 90vh;
+  min-width: 90%;
+  position: relative;
+}
+
+.superscription {
+  min-height: 100px;
+  @include customFlex(center, center);
+  flex-direction: column;
+  &__name {
+    @include customFont(33px, 24px, 400, $DancingFont);
+  }
+  &__proffesion {
+    @include customFont(23px, 24px, 400, $DancingFont);
+  }
+}
+
+h1 {
+  @include customFont(48px, 58px, 400, $PlayfairFont);
+}
+
+.describeBox {
+    @include customFlex(center,center);
+    flex-direction: column;
+
+  &__line {
+    width:25%;
+    height: 3px;
+    background-color: white;
+  }  
+  &__description {
+    @include customFont(16px, 23px, 200, $RalewayFont);
+    text-align: center;
+  }
+}

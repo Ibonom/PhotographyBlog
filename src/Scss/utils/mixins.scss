@@ -1,0 +1,12 @@
+@mixin customFlex ($row:'',$column:'' ){
+    display: flex;
+    justify-content: $row;
+    align-items: $column;
+};
+
+@mixin customFont ($size:"",$lineHeight:"",$weight:"", $fontFamily:"") {
+    font-size:$size;
+    line-height: $lineHeight;
+    font-weight: $weight;
+    font-family: $fontFamily;
+}
