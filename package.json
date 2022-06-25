@@ -1,0 +1,30 @@
+{
+  "name": "photography-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "npm run gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ibonom/PhotographyBlog.git"
+  },
+  "author": "Dawid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ibonom/PhotographyBlog/issues"
+  },
+  "homepage": "https://github.com/Ibonom/PhotographyBlog#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}
