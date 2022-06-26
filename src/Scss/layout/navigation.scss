@@ -5,7 +5,7 @@
   @include customFlex("flex-end", "center");
   &__navName {
     margin: 0 auto 0 35px;
-    @include customFont(22px, 24px, 400, $DancingFont);
+    @include customFont(25px, 24px, 400, $DancingFont);
     color: $blackHalf;
   }
   a {
@@ -14,7 +14,7 @@
   }
   &__navLinks {
     color: $blacklight;
-    @include customFont(13px, 31px, 400, $RalewayFont);
+    @include customFont(16px, 31px, 400, $RalewayFont);
     margin: 0 50px;
   }
 }

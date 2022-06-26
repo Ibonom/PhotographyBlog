@@ -1,0 +1,20 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+.Input{
+    box-sizing: border-box;
+    height: 50px;
+    background-color: #ffff;
+    border: 1px solid $red;
+    width: 50%;
+    padding: 15px;
+    margin: 10px;
+    @include customFont(16px,12px,400,$RalewayFont);
+    &--area{
+        box-sizing: border-box;
+         @extend .Input;
+         height: 200px;
+         resize: none;
+         padding: 15px;
+    }
+}

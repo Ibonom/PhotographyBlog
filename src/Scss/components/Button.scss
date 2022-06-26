@@ -1,0 +1,11 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+.Button{
+    @include customFont(20px,12px,500,$RalewayFont);
+    color: white;
+    background-color: $red;
+    border: none;
+    padding: 20px 55px;
+    cursor: pointer;
+}

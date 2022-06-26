@@ -1,12 +1,18 @@
-@mixin customFlex ($row:'',$column:'' ){
-    display: flex;
-    justify-content: $row;
-    align-items: $column;
-};
+@mixin customFlex($row: "", $column: "") {
+  display: flex;
+  justify-content: $row;
+  align-items: $column;
+}
 
-@mixin customFont ($size:"",$lineHeight:"",$weight:"", $fontFamily:"") {
-    font-size:$size;
-    line-height: $lineHeight;
-    font-weight: $weight;
-    font-family: $fontFamily;
+@mixin customFont($size: "", $lineHeight: "", $weight: "", $fontFamily: "") {
+  font-size: $size;
+  line-height: $lineHeight;
+  font-weight: $weight;
+  font-family: $fontFamily;
+}
+
+@mixin lineProperty($width: "", $height: "", $color: "") {
+  height: $height;
+  width: $width;
+  background-color: $color;
 }

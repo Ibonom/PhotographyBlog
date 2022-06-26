@@ -1,0 +1,43 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+.commentSection {
+  height: 50vh;
+  @include customFlex(center, center);
+  flex-direction: column;
+  &__Tittle {
+    @include customFont(30px, 58px, 400, $PlayfairFont);
+  }
+  &__line {
+    @include lineProperty(50px, 1.5px, $red);
+  }
+  &__comments {
+    @include customFont(18px, 25px, 300, $RalewayFont);
+    color:$lightGray;
+    padding: 10px;
+    width: 60%;
+  }
+  &__author {
+    @include customFont(16px, 25px, 300, $RalewayFont);
+    color: #a0a0a0;
+    padding: 10px;
+  }
+}
+
+.dotNavigation {
+    @include customFlex(space-between,center);
+    min-width: 5%;
+    padding: 10px;
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 4px;
+    background-color: #d3d3d3;
+  }
+  .active {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #d07c7c;
+  }
+}

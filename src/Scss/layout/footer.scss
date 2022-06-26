@@ -1,0 +1,28 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+.footerSection{
+    height: 35vh;
+    @include customFlex(flex-end,center);
+    flex-direction: column;
+    &__button{
+        margin-bottom: 15px;
+        background-color: transparent;
+        border: none;
+    }
+    &__author{
+        @include customFont(21px,15px,400,$DancingFont);
+        color:black;
+        padding: 5px;
+    }
+    &__spec{
+        @include customFont(18px,15px,400,$DancingFont);
+        color:black;
+        padding: 5px;
+    }
+    &__copyright{
+        margin-top: 25px;
+        @include customFont(16px,20px,300,$RalewayFont);
+    }
+}
+

@@ -1,0 +1,53 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+
+.formSection{
+    position: relative;
+    height: 70vh;
+    padding: 25px;
+    margin-top: 15%;
+    &__tittle{
+        padding-top: 10px;
+        text-align: center;
+        @include customFont(35px,18px,400,$PlayfairFont);
+        color:#5a5957,
+    }
+    &__line{
+        @include lineProperty(10%,1.5px,$red);
+    }
+    &__description{
+        text-align: center;
+        @include customFont(14px,18px,300,$RalewayFont);
+        color:$lightGray;
+    }
+}
+
+.formSection:after{
+    content: '';
+    position: absolute;
+    background-image: url('../../../public/images/Architecture-picture.png');
+    background-size: cover;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity: 0.1;
+}
+
+.formBox{
+    width: 80%;
+    margin:0 auto;
+    @include customFlex(center,center);
+    flex-direction: column;
+}
+
+.formButtonBox{
+    width: 50%;
+    @include customFlex(space-between);
+    &__info{
+        @include customFont(16px,18px,300,$RalewayFont);
+        color:$lightGray;
+    }
+}

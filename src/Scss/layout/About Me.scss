@@ -1,0 +1,26 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+
+.aboutMe{ 
+    height: 90vh;
+    @include customFlex(center);
+    flex-direction: column;
+    &__tittle{
+        @include customFont(40px,14px,400,$PlayfairFont);
+        height: max-content;
+        color: #5a5957;
+        text-align: center
+    }
+    &__description{
+        @include customFont(18px,26px,300,$RalewayFont);
+        color:$lightGray;
+        text-align: center;
+        padding: 0 10%;
+    }
+    &__line{
+        background-color: $red;
+        height: 1.5px;
+        width: 80px;
+    }
+}

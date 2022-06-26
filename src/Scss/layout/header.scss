@@ -34,9 +34,7 @@ h1 {
     flex-direction: column;
 
   &__line {
-    width:25%;
-    height: 3px;
-    background-color: white;
+    @include lineProperty(25%,1.5px,white);
   }  
   &__description {
     @include customFont(16px, 23px, 200, $RalewayFont);
