@@ -32,3 +32,8 @@
     color: initial;
   }
 }
+
+.hrNav{
+  @include lineProperty(100%,1px,$gray);
+  border: none;
+}

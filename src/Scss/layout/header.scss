@@ -35,10 +35,10 @@
       @include customFont(23px, 24px, 400, $DancingFont);
     }
     @include for-tablet-portrait-up {
-      @include customFont(15px, 24px, 400, $DancingFont);
+      @include customFont(20px, 24px, 400, $DancingFont);
     }
     @include for-phone-only {
-      @include customFont(12px, 22px, 400, $PlayfairFont);
+      @include customFont(16px, 22px, 400, $PlayfairFont);
     }
   }
 }
@@ -64,13 +64,12 @@ h1 {
   &__description {
     text-align: center;
     text-shadow: 1px 1px $gray;
+   
     @include for-tablet-landscape-up {
-      font-size: 16px;
+      @include customFont(25px, 24px, 400, $PlayfairFont);
     }
     @include for-tablet-portrait-up {
-      font-size: 12px;
-    }
-    @include for-phone-only {
+      font-size: 16px;
     }
   }
 }
