@@ -4,7 +4,7 @@
 .header {
   @include customFlex(center, center);
   background-size: cover;
-  background-image: url("/public/images/FirstPhoto.png");
+  background-image: url("../../../public/images/FirstPhoto.png");
   color: white;
   flex-direction: column;
   filter: sepia(60%);

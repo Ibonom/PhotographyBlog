@@ -13,7 +13,7 @@ const buildStyles = () => {
     .pipe(sourceMaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(browserSync.stream())
-    .pipe(minifyCss({ processImport: false }))
+    .pipe(minifyCss({rebaseTo:'./public'}))
     .pipe(sourceMaps.write())
     .pipe(concat("bundle.css"))
     .pipe(dest("./public"));

@@ -1,26 +1,29 @@
 @import "../utils/mixins.scss";
 @import "../utils/variables.scss";
 
-.Input{
+.Input {
+  box-sizing: border-box;
+  background-color: #ffff;
+  border: 1px solid $red;
+  width: 50%;
+  padding: 15px;
+  margin: 10px;
+  @include customFont(16px, 12px, 400, $RalewayFont);
+  @include for-phone-only {
+    font-size: 10px;
+    height: 25px;
+    width: 100%;
+  }
+  &--area {
+    @include customFont(16px, 12px, 400, $RalewayFont);
     box-sizing: border-box;
-    background-color: #ffff;
-    border: 1px solid $red;
-    width: 50%;
+    @extend .Input;
+    height: 200px;
+    resize: none;
     padding: 15px;
-    margin: 10px;
-    @include customFont(16px,12px,400,$RalewayFont);
-    @include for-phone-only{
-        height: 25px;
-        width: 100%;
+    @include for-phone-only {
+      font-size: 10px;
+      height: 100px;
     }
-    &--area{
-        box-sizing: border-box;
-         @extend .Input;
-         height: 200px;
-         resize: none;
-         padding: 15px;
-         @include for-phone-only{
-            height: 100px;
-         }
-    }
+  }
 }
