@@ -24,6 +24,9 @@
     &__copyright{
         margin-top: 25px;
         @include customFont(16px,20px,300,$RalewayFont);
+        @include for-phone-only{
+            font-size: 10px;
+        }
     }
 }
 

@@ -5,6 +5,9 @@
 .iconSocial{
     cursor: pointer;
     color:$lightGray;
+    @include for-phone-only{
+        margin: 5px;
+    }
 }
 
 .iconSocial:hover{
@@ -12,4 +15,8 @@
     padding: 10px;
     border-radius: 26px;
     background-color: #e6b5b5;
+    @include for-phone-only{
+        padding: 13px;
+        border-radius: 100%;
+    }
 }

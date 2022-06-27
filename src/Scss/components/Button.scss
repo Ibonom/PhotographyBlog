@@ -8,4 +8,8 @@
     border: none;
     padding: 20px 55px;
     cursor: pointer;
+    @include for-phone-only{
+        padding: 15px 25px;
+        font-size: 15px;
+    }
 }

@@ -45,9 +45,17 @@
 
 .formButtonBox{
     width: 50%;
-    @include customFlex(space-between);
+    @include customFlex(space-around,center);
+    @include for-phone-only{
+        width: 100%
+    }
     &__info{
         @include customFont(16px,18px,300,$RalewayFont);
         color:$lightGray;
+        text-align: center;
+        @include for-phone-only{
+            padding: 5px;
+            font-size: 9px;
+        }
     }
 }

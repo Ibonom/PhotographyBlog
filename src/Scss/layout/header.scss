@@ -11,33 +11,66 @@
   height: 90vh;
   min-width: 90%;
   position: relative;
+  @include for-phone-only{
+    padding: 10px
+  }
 }
 
 .superscription {
-  min-height: 100px;
   @include customFlex(center, center);
   flex-direction: column;
   &__name {
-    @include customFont(33px, 24px, 400, $DancingFont);
+    @include for-tablet-portrait-up {
+      @include customFont(25px, 24px, 400, $DancingFont);
+    }
+    @include for-tablet-landscape-up {
+      @include customFont(33px, 24px, 400, $DancingFont);
+    }
+    @include for-phone-only {
+      @include customFont(20px, 22px, 400, $PlayfairFont);
+    }
   }
   &__proffesion {
-    @include customFont(23px, 24px, 400, $DancingFont);
+    @include for-tablet-landscape-up {
+      @include customFont(23px, 24px, 400, $DancingFont);
+    }
+    @include for-tablet-portrait-up {
+      @include customFont(15px, 24px, 400, $DancingFont);
+    }
+    @include for-phone-only {
+      @include customFont(12px, 22px, 400, $PlayfairFont);
+    }
   }
 }
 
 h1 {
-  @include customFont(48px, 58px, 400, $PlayfairFont);
+  text-align: center;
+  @include for-tablet-landscape-up {
+    @include customFont(48px, 58px, 400, $PlayfairFont);
+  }
+  @include for-tablet-portrait-up {
+    @include customFont(36px, 24px, 400, $PlayfairFont);
+  }
 }
 
 .describeBox {
-    @include customFlex(center,center);
-    flex-direction: column;
+  text-shadow: 1px 1px $gray;
+  @include customFlex(center, center);
+  flex-direction: column;
 
   &__line {
-    @include lineProperty(25%,1.5px,white);
-  }  
+    @include lineProperty(25%, 1.5px, white);
+  }
   &__description {
-    @include customFont(16px, 23px, 200, $RalewayFont);
     text-align: center;
+    text-shadow: 1px 1px $gray;
+    @include for-tablet-landscape-up {
+      font-size: 16px;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 12px;
+    }
+    @include for-phone-only {
+    }
   }
 }

@@ -7,6 +7,9 @@ const formSection = document.querySelector(".formSection");
 const navigationBar = document.querySelector(".navigation");
 const headerArrow = document.querySelector(".header__arrow");
 const footerArrow = document.querySelector(".footerSection__button");
+const dots = document.querySelectorAll(".dot");
+const commentDescription = document.querySelector(".commentSection__comments");
+const commentAuthor = document.querySelector(".commentSection__author");
 
 const propertyScroll = {
   behavior: "smooth",
@@ -14,7 +17,7 @@ const propertyScroll = {
 };
 
 const scrollFunction = (triggerTxt) => {
-  if (triggerTxt === "ABOUT" || triggerTxt === "#about") {
+  if (triggerTxt === "ABOUT" || triggerTxt === "#aboutme") {
     aboutMeSection.scrollIntoView(propertyScroll);
   } else if (triggerTxt === "WORKS" || triggerTxt === "#gallery") {
     gallerySection.scrollIntoView(propertyScroll);
@@ -22,6 +25,8 @@ const scrollFunction = (triggerTxt) => {
     formSection.scrollIntoView(propertyScroll);
   } else if (triggerTxt === "FOLLOW ME" || triggerTxt === "#followme") {
     followSection.scrollIntoView(propertyScroll);
+  } else if (triggerTxt === "#header") {
+    headerSection.scrollIntoView(propertyScroll);
   }
 };
 
@@ -29,17 +34,21 @@ navigationBar.addEventListener("click", (e) => {
   scrollFunction(e.target.textContent);
 });
 
-headerArrow.addEventListener("click", () =>
-  aboutMeSection.scrollIntoView(propertyScroll)
-);
-footerArrow.addEventListener("click", () =>
-  headerSection.scrollIntoView(propertyScroll)
-);
+headerArrow.addEventListener("click", () => {
+  window.location.hash = "aboutme";
+  aboutMeSection.scrollIntoView(propertyScroll);
+});
+footerArrow.addEventListener("click", () => {
+  headerSection.scrollIntoView(propertyScroll);
+  window.location.hash = "header";
+  scrollFunction("header");
+});
 //Hash logic
 scrollFunction(window.location.hash);
 
 if (window.history) {
-  window.addEventListener("hashchange", () => {
+  window.addEventListener("hashchange", (e) => {
+    e.preventDefault();
     scrollFunction(window.location.hash);
     window.history.pushState({}, null, window.location.hash);
   });
@@ -54,10 +63,6 @@ const quotes = {
   author: ["Aaron Siskind", "Ted Grant", "Paul Strand"],
 };
 //quotes
-const dots = document.querySelectorAll(".dot");
-const commentDescription = document.querySelector(".commentSection__comments");
-const commentAuthor = document.querySelector(".commentSection__author");
-
 setInterval(() => {
   dots.forEach((dot, index) => {
     setTimeout(() => {

@@ -3,10 +3,16 @@
 
 .commentSection {
   height: 50vh;
+  min-height: max-content;
   @include customFlex(center, center);
   flex-direction: column;
   &__Tittle {
     @include customFont(30px, 58px, 400, $PlayfairFont);
+    @include for-phone-only{
+      text-align: center;
+      margin-top: 100px;
+      font-size: 18px;
+    }
   }
   &__line {
     @include lineProperty(50px, 1.5px, $red);
@@ -17,11 +23,17 @@
     color:$lightGray;
     padding: 10px;
     width: 60%;
+    @include for-phone-only{
+      font-size: 12px;
+    }
   }
   &__author {
     @include customFont(16px, 25px, 300, $RalewayFont);
     color: #a0a0a0;
     padding: 10px;
+    @include for-phone-only{
+      font-size: 12px;
+    }
   }
 }
 
@@ -34,6 +46,7 @@
     height: 9px;
     border-radius: 4px;
     background-color: #d3d3d3;
+    margin: 5px;
   }
   .active {
     width: 12px;
