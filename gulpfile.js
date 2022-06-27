@@ -5,7 +5,6 @@ const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
 const minifyCss = require("gulp-clean-css");
 const sourceMaps = require("gulp-sourcemaps");
-const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify");
 
 const buildStyles = () => {
@@ -33,5 +32,4 @@ exports.buildStyles = buildStyles;
 exports.watch = () => {
   watch("./src/Scss/**/*.scss", buildStyles);
   watch("./src/JavaScript/*.js", buildJS);
-  watch("./*.html").on("change", browserSync.reload);
 };
