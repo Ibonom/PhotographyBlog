@@ -18,22 +18,27 @@
     cursor: pointer;
   }
   &__navLinks {
-    @include for-phone-only {
-      @include customFont(10px, 15px, 400, $RalewayFont);
-      text-align: center;
-      margin: 0;
-    }
+    text-align: center;
     text-decoration: none;
     color: $blacklight;
     @include customFont(16px, 31px, 400, $RalewayFont);
-    margin: 0 50px;
+    @include for-phone-only {
+      @include customFont(10px, 15px, 400, $RalewayFont);
+      margin: 0;
+    }
+    @include for-tablet-portrait-up {
+      margin: 0 15px;
+    }
+    @include for-tablet-landscape-up {
+      margin: 0 50px;
+    }
   }
   &__navLinks:active {
     color: initial;
   }
 }
 
-.hrNav{
-  @include lineProperty(100%,1px,$gray);
+.hrNav {
+  @include lineProperty(100%, 1px, $gray);
   border: none;
 }
