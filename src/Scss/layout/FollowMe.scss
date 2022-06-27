@@ -17,9 +17,9 @@
     
 }
 .socialMediaNav{
-    margin-top: 20px;
     width: 50%;
+    height: 50px;
     margin: 0 auto;
     @include customFlex(space-around,center);
-    color: #5a5957;
+    fill: #5a5957;
 }

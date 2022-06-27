@@ -1,0 +1,15 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+
+.iconSocial{
+    cursor: pointer;
+    color:$lightGray;
+}
+
+.iconSocial:hover{
+    fill:#ffff;
+    padding: 10px;
+    border-radius: 26px;
+    background-color: #e6b5b5;
+}

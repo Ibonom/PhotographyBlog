@@ -13,8 +13,13 @@
     cursor: pointer;
   }
   &__navLinks {
+    text-decoration: none;
     color: $blacklight;
     @include customFont(16px, 31px, 400, $RalewayFont);
     margin: 0 50px;
   }
+  &__navLinks:active {
+    color: initial;
+  }
 }
+
